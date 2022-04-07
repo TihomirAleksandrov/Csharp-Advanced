@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackSum", "StackSum\StackS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleCalculator", "SimpleCalculator\SimpleCalculator.csproj", "{22B611BF-5EAF-49CD-8171-282E3EDBC25D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatchingBrackets", "MatchingBrackets\MatchingBrackets.csproj", "{872918F6-4D3A-4B9B-80A3-D21A4EE6B47B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{22B611BF-5EAF-49CD-8171-282E3EDBC25D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22B611BF-5EAF-49CD-8171-282E3EDBC25D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22B611BF-5EAF-49CD-8171-282E3EDBC25D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{872918F6-4D3A-4B9B-80A3-D21A4EE6B47B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{872918F6-4D3A-4B9B-80A3-D21A4EE6B47B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{872918F6-4D3A-4B9B-80A3-D21A4EE6B47B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{872918F6-4D3A-4B9B-80A3-D21A4EE6B47B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
