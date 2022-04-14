@@ -7,7 +7,7 @@ namespace MaximalSum
     {
         static void Main(string[] args)
         {
-            int[] size = Console.ReadLine().Split().Select(int.Parse).ToArray();
+            int[] size = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
 
             int rows = size[0];
             int cols = size[1];
@@ -16,7 +16,7 @@ namespace MaximalSum
 
             for (int row = 0; row < rows; row++)
             {
-                double[] input = Console.ReadLine().Split().Select(double.Parse).ToArray();
+                double[] input = Console.ReadLine().Split(" ",StringSplitOptions.RemoveEmptyEntries).Select(double.Parse).ToArray();
                 
                 for (int col = 0; col < cols; col++)
                 {
