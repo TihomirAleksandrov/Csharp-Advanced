@@ -9,13 +9,13 @@ namespace JaggedArrayManipulator
         {
             int rows = int.Parse(Console.ReadLine());
 
-            long[][] jaggedArray = new long[rows][];
+            double[][] jaggedArray = new double[rows][];
 
             for (int row = 0; row < rows; row++)
             {
-                long[] nums = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).Select(long.Parse).ToArray();
-                
-                jaggedArray[row] = new long[nums.Length];
+                double[] nums = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).Select(double.Parse).ToArray();
+
+                jaggedArray[row] = new double[nums.Length];
 
                 for (int col = 0; col < nums.Length; col++)
                 {
@@ -26,15 +26,15 @@ namespace JaggedArrayManipulator
             jaggedArray = AnalyzeArray(jaggedArray, rows);
 
             string input = Console.ReadLine();
-            
+
             while (input != "End")
             {
-                string[] splitInput = Console.ReadLine().Split(" ", StringSplitOptions.RemoveEmptyEntries).ToArray();
+                string[] splitInput = input.Split(" ", StringSplitOptions.RemoveEmptyEntries).ToArray();
 
                 string command = splitInput[0];
                 int row = int.Parse(splitInput[1]);
                 int col = int.Parse(splitInput[2]);
-                long value = long.Parse(splitInput[3]);
+                double value = double.Parse(splitInput[3]);
 
                 if (row >= 0 && row < rows)
                 {
@@ -57,7 +57,7 @@ namespace JaggedArrayManipulator
             PrintArray(jaggedArray);
         }
 
-        static void PrintArray(long[][] jaggedArray)
+        static void PrintArray(double[][] jaggedArray)
         {
             for (int row = 0; row < jaggedArray.GetLength(0); row++)
             {
@@ -69,7 +69,7 @@ namespace JaggedArrayManipulator
             }
         }
 
-        static long[][] AnalyzeArray(long[][] jaggedArray, int rows)
+        static double[][] AnalyzeArray(double[][] jaggedArray, int rows)
         {
             for (int row = 0; row < rows - 1; row++)
             {
