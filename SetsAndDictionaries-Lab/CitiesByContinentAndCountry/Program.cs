@@ -20,31 +20,17 @@ namespace CitiesByContinentAndCountry
                 string country = input[1];
                 string city = input[2];
 
-                if (cities.ContainsKey(continent))
-                {
-                    if (cities[continent].ContainsKey(country))
-                    {
-                        if (cities[continent][country].Contains(city))
-                        {
-                            continue;
-                        }
-                        else
-                        {
-                            cities[continent][country].Add(city);
-                        }
-                    }
-                    else
-                    {
-                        cities[continent].Add(country, new List<string>());
-                        cities[continent][country].Add(city);
-                    }
-                }
-                else
+                if (!cities.ContainsKey(continent))
                 {
                     cities.Add(continent, new Dictionary<string, List<string>>());
-                    cities[continent].Add(country, new List<string>());
-                    cities[continent][country].Add(city);
                 }
+
+                if (!cities[continent].ContainsKey(country))
+                {
+                    cities[continent].Add(country, new List<string>());
+                }
+
+                cities[continent][country].Add(city);
             }
 
             foreach (string continent in cities.Keys)
