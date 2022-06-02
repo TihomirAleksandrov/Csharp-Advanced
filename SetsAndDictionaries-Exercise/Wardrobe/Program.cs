@@ -14,7 +14,7 @@ namespace Wardrobe
 
             for (int i = 0; i < inputNum; i++)
             {
-                string[] separators = { " ", "->", "," };
+                string[] separators = {" -> ", "," };
                 string[] clothes = Console.ReadLine().Split(separators, StringSplitOptions.RemoveEmptyEntries).ToArray();
 
                 string color = clothes[0];
