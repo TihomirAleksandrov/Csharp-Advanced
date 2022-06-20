@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarExtension", "CarExtensio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarConstructors", "CarConstructors\CarConstructors.csproj", "{511D307A-E760-468D-8FB3-73029E673D3F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarEngineAndTires", "CarEngineAndTires\CarEngineAndTires.csproj", "{095DC2C0-0B82-4583-A264-92B181B7C905}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{511D307A-E760-468D-8FB3-73029E673D3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{511D307A-E760-468D-8FB3-73029E673D3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{511D307A-E760-468D-8FB3-73029E673D3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{095DC2C0-0B82-4583-A264-92B181B7C905}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{095DC2C0-0B82-4583-A264-92B181B7C905}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{095DC2C0-0B82-4583-A264-92B181B7C905}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{095DC2C0-0B82-4583-A264-92B181B7C905}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
