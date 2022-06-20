@@ -52,9 +52,9 @@ namespace CarManufacturer
 
         public void Drive(double distance)
         {
-            if (FuelQuantity - (distance * FuelConsumption) > 0)
+            if (FuelQuantity - (distance * FuelConsumption) / 100 > 0)
             {
-                FuelQuantity -= (distance * FuelConsumption);
+                FuelQuantity -= (distance * FuelConsumption) / 100;
             }
             else
             {
