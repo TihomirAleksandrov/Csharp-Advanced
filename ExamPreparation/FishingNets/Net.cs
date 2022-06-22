@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Collections.Generic;
+using System.Text;
 
 namespace FishingNet
 {
@@ -50,13 +51,10 @@ namespace FishingNet
 
         public bool ReleaseFish(double weight)
         {
-            for (int i = 0; i < Fish.Count; i++)
+            if (Fish.Any(x => x.Weight == weight))
             {
-                if (Fish[i].Weight == weight)
-                {
-                    Fish.RemoveAt(i);
-                    return true;
-                }
+                Fish fish = Fish.First(x => x.Weight == weight);
+                return Fish.Remove(fish);
             }
 
             return false;
@@ -64,44 +62,26 @@ namespace FishingNet
 
         public Fish GetFish(string fishType)
         {
-            Fish fish = new Fish("", 0, 0);
-
-            foreach (Fish f in Fish)
-            {
-                if (f.FishType == fishType)
-                {
-                    fish = f;
-                }
-            }
-
-            return fish;
+            return Fish.FirstOrDefault(x => x.FishType == fishType);
         }
 
         public Fish GetBiggestFish()
         {
-            Fish fish = new Fish("", 0, 0);
-
-            foreach (Fish f in Fish)
-            {
-                if (f.Length > fish.Length)
-                {
-                    fish = f;
-                }
-            }
-
-            return fish;
+            return Fish.OrderByDescending(x => x.Length).FirstOrDefault();
         }
 
-        public void Report()
+        public string Report()
         {
-            Fish = Fish.OrderByDescending(x => x.Length).ToList();
+            StringBuilder sb = new StringBuilder();
 
-            Console.WriteLine($"Into the {Material}:");
-            
-            foreach (Fish f in Fish)
+            sb.AppendLine($"Into the {Material}:");
+
+            foreach (Fish fish in Fish.OrderByDescending(x => x.Length))
             {
-                Console.WriteLine(f.ToString());
+                sb.AppendLine(fish.ToString());
             }
+
+            return sb.ToString().TrimEnd();
         }
     }
 }
