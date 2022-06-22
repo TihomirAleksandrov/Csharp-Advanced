@@ -39,11 +39,6 @@ namespace BeaverAtWork
 
             while (command != "end")
             {
-                if (branchesCount == 0)
-                {
-                    break;
-                }
-
                 if (command == "up")
                 {
                     if (currRow - 1 != -1)
@@ -83,12 +78,6 @@ namespace BeaverAtWork
                                 }
                             }
                         }
-                        else if (pond[currRow - 1, currCol] == '-')
-                        {
-                            pond[currRow - 1, currCol] = 'B';
-                            pond[currRow, currCol] = '-';
-                            currRow--;
-                        }
                         else if (char.IsLower(pond[currRow - 1, currCol]))
                         {
                             branches.Add(pond[currRow - 1, currCol]);
@@ -96,6 +85,12 @@ namespace BeaverAtWork
                             pond[currRow, currCol] = '-';
                             currRow--;
                             branchesCount--;
+                        }
+                        else
+                        {
+                            pond[currRow - 1, currCol] = 'B';
+                            pond[currRow, currCol] = '-';
+                            currRow--;
                         }
                     }
                     else
@@ -145,12 +140,6 @@ namespace BeaverAtWork
                                 }
                             }
                         }
-                        else if (pond[currRow + 1, currCol] == '-')
-                        {
-                            pond[currRow + 1, currCol] = 'B';
-                            pond[currRow, currCol] = '-';
-                            currRow++;
-                        }
                         else if (char.IsLower(pond[currRow + 1, currCol]))
                         {
                             branches.Add(pond[currRow + 1, currCol]);
@@ -158,6 +147,12 @@ namespace BeaverAtWork
                             pond[currRow, currCol] = '-';
                             currRow++;
                             branchesCount--;
+                        }
+                        else
+                        {
+                            pond[currRow + 1, currCol] = 'B';
+                            pond[currRow, currCol] = '-';
+                            currRow++;
                         }
                     }
                     else
@@ -207,12 +202,6 @@ namespace BeaverAtWork
                                 }
                             }
                         }
-                        else if (pond[currRow, currCol - 1] == '-')
-                        {
-                            pond[currRow, currCol - 1] = 'B';
-                            pond[currRow, currCol] = '-';
-                            currCol--;
-                        }
                         else if (char.IsLower(pond[currRow, currCol - 1]))
                         {
                             branches.Add(pond[currRow, currCol - 1]);
@@ -220,6 +209,12 @@ namespace BeaverAtWork
                             pond[currRow, currCol] = '-';
                             currCol--;
                             branchesCount--;
+                        }
+                        else
+                        {
+                            pond[currRow, currCol - 1] = 'B';
+                            pond[currRow, currCol] = '-';
+                            currCol--;
                         }
                     }
                     else
@@ -269,12 +264,6 @@ namespace BeaverAtWork
                                 }
                             }
                         }
-                        else if (pond[currRow, currCol + 1] == '-')
-                        {
-                            pond[currRow, currCol + 1] = 'B';
-                            pond[currRow, currCol] = '-';
-                            currCol++;
-                        }
                         else if (char.IsLower(pond[currRow, currCol + 1]))
                         {
                             branches.Add(pond[currRow, currCol + 1]);
@@ -282,6 +271,12 @@ namespace BeaverAtWork
                             pond[currRow, currCol] = '-';
                             currCol++;
                             branchesCount--;
+                        }
+                        else
+                        {
+                            pond[currRow, currCol + 1] = 'B';
+                            pond[currRow, currCol] = '-';
+                            currCol++;
                         }
                     }
                     else
@@ -291,6 +286,11 @@ namespace BeaverAtWork
                             branches.RemoveAt(branches.Count - 1);
                         }
                     }
+                }
+
+                if (branchesCount == 0)
+                {
+                    break;
                 }
 
                 command = Console.ReadLine();
