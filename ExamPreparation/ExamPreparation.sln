@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BakeryShop", "BakeryShop\Ba
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BeaverAtWork", "BeaverAtWork\BeaverAtWork.csproj", "{B6BC2DFF-2427-4E8D-8225-5A2DEEC948BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MealPlan", "MealPlan\MealPlan.csproj", "{A5F939CA-B2D3-42DA-A8BD-27D041F58378}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MealPlan", "MealPlan\MealPlan.csproj", "{A5F939CA-B2D3-42DA-A8BD-27D041F58378}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TruffleHunter", "TruffleHunter\TruffleHunter.csproj", "{A1F0A9A3-CB8D-46B2-89FA-443C8FECC6F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TruffleHunter", "TruffleHunter\TruffleHunter.csproj", "{A1F0A9A3-CB8D-46B2-89FA-443C8FECC6F3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zoo", "Zoo\Zoo.csproj", "{A036F160-CC07-425E-AFC9-744690AF0893}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{A1F0A9A3-CB8D-46B2-89FA-443C8FECC6F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1F0A9A3-CB8D-46B2-89FA-443C8FECC6F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1F0A9A3-CB8D-46B2-89FA-443C8FECC6F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A036F160-CC07-425E-AFC9-744690AF0893}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A036F160-CC07-425E-AFC9-744690AF0893}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A036F160-CC07-425E-AFC9-744690AF0893}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A036F160-CC07-425E-AFC9-744690AF0893}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
